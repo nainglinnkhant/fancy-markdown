@@ -2,7 +2,9 @@ import { ChangeEventHandler, useCallback, useEffect, useRef, useState } from 're
 import { SiMarkdown } from 'react-icons/si'
 
 import { Command, CommandInput, CommandItem, CommandList } from '@/components/ui/Command'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar'
 import { Textarea } from '@/components/ui/Textarea'
+import { generateUsernameInitials } from '@/components/preview/utils'
 import { cn } from '@/lib/utils'
 import { getCaretCoordinates, getCurrentWord, replaceWord } from './utils'
 import { mentions } from './data'
@@ -130,7 +132,7 @@ const Write = ({ markdownText, setMarkdownText }: WriteProps) => {
         ref={mentionsDropDownRef}
         className={cn(
           { hidden: !showMentions },
-          'absolute h-auto max-h-[138px] w-auto p-[5px] shadow'
+          'absolute h-auto max-h-44 w-auto min-w-[195px] p-[5px] shadow'
         )}
       >
         <div className='hidden'>
@@ -142,13 +144,24 @@ const Write = ({ markdownText, setMarkdownText }: WriteProps) => {
         </div>
 
         <CommandList>
-          {mentions.map(mention => (
+          {mentions.map(({ username, name, profileImg }) => (
             <CommandItem
-              key={mention.username}
-              value={mention.username}
+              key={username}
+              value={username}
               onSelect={onCommandSelect}
+              className='flex space-x-3'
             >
-              {mention.username}
+              <Avatar>
+                <AvatarImage src={profileImg} />
+                <AvatarFallback>
+                  {generateUsernameInitials(username.replace('@', ''))}
+                </AvatarFallback>
+              </Avatar>
+
+              <div>
+                <h4 className='text-sm'>{name}</h4>
+                <p className='text-sm text-muted-foreground'>{username}</p>
+              </div>
             </CommandItem>
           ))}
         </CommandList>

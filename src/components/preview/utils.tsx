@@ -1,6 +1,6 @@
 export const generateUsernameInitials = (username: string) => {
-  if (!username.includes('_')) return username.slice(0, 2)
+  if (!username.includes('_')) return username.slice(0, 2).toUpperCase()
 
-  const [firstName, lastName] = username.split('_')
+  const [firstName, lastName] = username.toUpperCase().split('_')
   return `${firstName[0]}${lastName[0]}`
 }
