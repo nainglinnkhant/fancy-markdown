@@ -115,7 +115,7 @@ const Write = ({ markdownText, setMarkdownText }: WriteProps) => {
   }, [handleBlur, handleKeyDown, handleMouseDown, handleSelectionChange])
 
   return (
-    <div className='relative h-[300px] w-[600px]'>
+    <div className='relative h-[300px] w-[90vw] max-w-[600px]'>
       <Textarea
         autoComplete='off'
         autoCorrect='off'
