@@ -61,11 +61,11 @@ export const getCurrentWord = (textarea: HTMLTextAreaElement) => {
   let wordStart = caretPosition
   let wordEnd = caretPosition
 
-  while (wordStart > 0 && text[wordStart - 1] !== ' ') {
+  while (wordStart > 0 && text[wordStart - 1].match(/\S/)) {
     wordStart--
   }
 
-  while (wordEnd < text.length && text[wordEnd] !== ' ') {
+  while (wordEnd < text.length && text[wordEnd].match(/\S/)) {
     wordEnd++
   }
 
