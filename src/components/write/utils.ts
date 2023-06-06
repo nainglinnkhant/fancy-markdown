@@ -61,6 +61,8 @@ export const getCurrentWord = (textarea: HTMLTextAreaElement) => {
   let wordStart = caretPosition
   let wordEnd = caretPosition
 
+  // Normally, caret position will always be one index ahead of last word's index,
+  // so we need to substract one from caret position to get the last word.
   while (wordStart > 0 && text[wordStart - 1].match(/\S/)) {
     wordStart--
   }
