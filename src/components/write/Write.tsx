@@ -4,10 +4,9 @@ import { SiMarkdown } from 'react-icons/si'
 import { Command, CommandInput, CommandItem, CommandList } from '@/components/ui/Command'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar'
 import { Textarea } from '@/components/ui/Textarea'
-import { generateUsernameInitials } from '@/components/preview/utils'
-import { cn } from '@/lib/utils'
+import { cn, generateUsernameInitials } from '@/lib/utils'
+import { mentions } from '@/data/mentions'
 import { getCaretCoordinates, getCurrentWord, replaceWord } from './utils'
-import { mentions } from './data'
 
 interface WriteProps {
   markdownText: string

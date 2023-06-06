@@ -3,8 +3,8 @@ import { HoverCardPortal } from '@radix-ui/react-hover-card'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/HoverCard'
-import { mentions } from '@/components/write/data'
-import { generateUsernameInitials } from './utils'
+import { generateUsernameInitials } from '@/lib/utils'
+import { mentions } from '@/data/mentions'
 
 const Mention = ({ twittername }: { twittername: string }) => {
   const mention = mentions.find(mention => mention.username === `@${twittername}`)
