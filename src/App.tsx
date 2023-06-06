@@ -5,7 +5,7 @@ import Write from '@/components/write/Write'
 import Preview from '@/components/preview/Preview'
 
 const DEFAULT_TEXT =
-  'built by @nainglk, heavily inspired by @mxkaske, built with @shadcn **ui**'
+  'built by @nainglk, heavily inspired by @mxkaske, built with @shadcn **ui** \n\n ## What is Markdown? \n\n Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world’s most popular markup languages.'
 
 function App() {
   const [markdownText, setMarkdownText] = useState(DEFAULT_TEXT)

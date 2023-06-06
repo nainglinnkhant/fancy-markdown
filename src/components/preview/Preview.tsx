@@ -8,8 +8,8 @@ const Preview = ({ markdownText }: PreviewProps) => {
   const Component = useProcessor(markdownText)
 
   return (
-    <div className='h-[300px] w-[600px] overflow-auto px-3 py-2 text-[15px]'>
-      {Component}
+    <div className='w-[600px]'>
+      <div className='prose prose-a:font-normal'>{Component}</div>
     </div>
   )
 }
