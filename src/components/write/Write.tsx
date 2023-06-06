@@ -47,16 +47,6 @@ const Write = ({ markdownText, setMarkdownText }: WriteProps) => {
     [showMentions]
   )
 
-  const onCommandSelect = useCallback((value: string) => {
-    const textarea = textareaRef.current
-
-    if (!textarea) return
-
-    replaceWord(textarea, `${value}`)
-    setCommandValue('')
-    setShowMentions(false)
-  }, [])
-
   const handleMouseDown = useCallback((e: Event) => {
     e.preventDefault()
     e.stopPropagation()
@@ -73,6 +63,16 @@ const Write = ({ markdownText, setMarkdownText }: WriteProps) => {
       setShowMentions(false)
     }
   }, [commandValue])
+
+  const onCommandSelect = useCallback((value: string) => {
+    const textarea = textareaRef.current
+
+    if (!textarea) return
+
+    replaceWord(textarea, `${value}`)
+    setCommandValue('')
+    setShowMentions(false)
+  }, [])
 
   const handleTextChange: ChangeEventHandler<HTMLTextAreaElement> = e => {
     setMarkdownText(e.target.value)
@@ -123,14 +123,14 @@ const Write = ({ markdownText, setMarkdownText }: WriteProps) => {
         ref={textareaRef}
         value={markdownText}
         onChange={handleTextChange}
-        className='h-full w-full resize-none rounded-lg text-base'
+        className='h-full w-full resize-none rounded-lg text-[15px]'
       />
 
       <Command
         ref={mentionsDropDownRef}
         className={cn(
           { hidden: !showMentions },
-          'absolute h-auto max-h-32 w-auto p-[5px] shadow'
+          'absolute h-auto max-h-[138px] w-auto p-[5px] shadow'
         )}
       >
         <div className='hidden'>
