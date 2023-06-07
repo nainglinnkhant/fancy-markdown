@@ -23,7 +23,6 @@ const useProcessor = (markdownText: string) => {
       .use(rehypeRaw)
       .use(rehypeSanitize, {
         ...defaultSchema,
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         tagNames: [...defaultSchema.tagNames!, 'mention'],
         attributes: {
           ...defaultSchema.attributes,

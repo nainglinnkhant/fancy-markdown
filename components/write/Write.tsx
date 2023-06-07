@@ -1,3 +1,5 @@
+'use client'
+
 import { ChangeEventHandler, useCallback, useEffect, useRef, useState } from 'react'
 import { SiMarkdown } from 'react-icons/si'
 

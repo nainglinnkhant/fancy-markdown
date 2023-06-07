@@ -51,7 +51,8 @@ const properties = [
   'MozTabSize',
 ] as const
 
-const isFirefox = window.mozInnerScreenX != null
+const isBrowser = typeof window !== 'undefined'
+const isFirefox = isBrowser && window.mozInnerScreenX != null
 
 export const getCurrentWord = (textarea: HTMLTextAreaElement) => {
   const text = textarea.value
@@ -128,7 +129,6 @@ export const getCaretCoordinates = (
         style.lineHeight = computed.height
       }
     } else {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       style[prop] = computed[prop]
     }
