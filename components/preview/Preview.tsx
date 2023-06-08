@@ -9,7 +9,7 @@ const Preview = ({ markdownText }: PreviewProps) => {
 
   return (
     <div className='w-[90vw] max-w-[600px]'>
-      <div className='prose prose-a:font-normal'>{Component}</div>
+      <div className='prose dark:prose-invert prose-a:font-normal'>{Component}</div>
     </div>
   )
 }
