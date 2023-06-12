@@ -65,7 +65,7 @@ export const mentions = [
     username: '@nainglk',
     profileImg:
       'https://pbs.twimg.com/profile_images/1523597981454581760/eGd61Z1Q_400x400.jpg',
-    description: 'Software Developer · Opensource Enthusiast',
+    description: 'Software Developer · Open Source Enthusiast',
     joined: 'February 2021',
   },
 ]
