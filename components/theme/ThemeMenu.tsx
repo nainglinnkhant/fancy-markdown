@@ -20,7 +20,7 @@ const ThemeMenu = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild className='absolute right-[5vw] top-5 md:right-5'>
-        <Button variant='outline' aria-label='Switch theme'>
+        <Button variant='outline' size='icon' aria-label='Switch theme'>
           <BiSun className='inline-block text-lg dark:hidden' />
           <BiMoon className='hidden text-lg dark:inline-block' />
         </Button>
