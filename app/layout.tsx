@@ -12,16 +12,25 @@ export const metadata = {
   description: DESCRIPTION,
   twitter: {
     card: 'summary_large_image',
-    images: [`/og`],
     title: TITLE,
     description: DESCRIPTION,
+    images: ['/og'],
+    creator: '@nainglk',
   },
   openGraph: {
     type: 'website',
-    images: [`/og`],
     title: TITLE,
     description: DESCRIPTION,
+    images: ['/og'],
+    siteName: TITLE,
+    url: 'https://fancy-markdown.vercel.app',
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
