@@ -10,6 +10,7 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE,
   description: DESCRIPTION,
+  metadataBase: 'https://fancy-markdown.vercel.app',
   twitter: {
     card: 'summary_large_image',
     title: TITLE,
