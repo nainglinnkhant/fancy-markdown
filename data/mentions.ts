@@ -47,7 +47,7 @@ export const mentions = [
     name: 'Guillermo Rauch',
     username: '@rauchg',
     profileImg:
-      'https://pbs.twimg.com/profile_images/1576257734810312704/ucxb4lHy_400x400.jpg',
+      'https://pbs.twimg.com/profile_images/1711810659099279360/opBugj2p_400x400.jpg',
     description: '@vercel CEO',
     joined: 'July 2008',
   },
