@@ -31,6 +31,10 @@ const Write = ({ markdownText, setMarkdownText }: WriteProps) => {
 
       if (!showMentions || !commandInput) return
 
+      if (e.key === 'Escape' || e.keyCode === 27) {
+        setShowMentions(false)
+      }
+
       if (
         e.key === 'ArrowUp' ||
         e.keyCode === 38 ||
